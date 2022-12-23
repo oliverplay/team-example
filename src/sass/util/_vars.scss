@@ -1,0 +1,76 @@
+// common variables/////////////
+$noListStyle: none;
+$noTextDeco: none;
+$fontStyle: normal;
+$lightestColor: #ffffff;                   //white
+$darkestColor: #000000;                    //black
+$darkAccentColor: #D41443;                 //darkpink
+$lightAccentColor: #FFA5BA;                 //lightpink
+
+//Fonts/////////////////////////
+$pr-font: 'DM Sans', sans-serif;
+$title-font: 'Titan One', cursive;
+
+// Hover Colors ///////////////////////
+$hoverLight: #ECEBEB; //lightpink
+
+
+//Extra Font Colors
+$fontColorAccentLight: #907E82;           //grey
+
+
+//font weights: main is 500 //////////
+$fontWeightLight: 400;
+$fontWeightMed: 500;
+$fontWeightHeavy: 700;
+
+//font sizes: very varied by screen size feel free to add any that I missed! /////////////
+// DT stands for dest top,
+// T stands for tablet,
+// M stands for mobile 
+
+$fontSizeMain: 14px;
+$fontSizeSmall: 12px;
+$fontSizeMedium: 16px;
+$fontSizeLarge: 20px;
+
+// These are for the headers
+//Mobile M
+$fontSizeMBig: 18px;
+$fontSizeMLargest: 34px;
+
+//Tablet T
+$fontSizeTBig: 26px;
+$fontSizeTLargest: 48px;
+
+//Desktop DT
+$fontSizeDBig: 30px;
+$fontSizeDLargest: 58px;
+
+// Background Colors //////////////////////////
+
+// main
+$backgroundColorMain: #fff;                 //whitish lightgrey
+$backgroundColorSecondary: #FFF5F6;            //light pink variation
+
+// Extra Background Accent colors
+$backgroundAccentDark: #E17992;
+$backgroundAccentLight: #FFB8CA;
+$backgroundAccentExtra: #F0D1A5;
+$backgroundAccentExtraDark:	#d2a214;             //lightyellow #d2d214
+$backgroundAccentOther: #C2E297;
+$backgroundAccentOtherDark: #14d243;
+$accentColorShade: #e1e1e1;             //lightgreen
+
+// Other Important Variables
+$soc-bg-color: #fea5bb;
+$border-line: 1px solid #e1e1e1;
+
+
+
+$border-mb-menu: 1px solid #e18298;
+//$bg-cl-mb-menu: #e17992;
+//$burger-btn-accent-cl: #7c0c28;
+//$reviews-icon-fill:#D31342;
+
+$gradientBackground: linear-gradient(180deg, rgba(255, 245, 246, 1) 35%, #fff 35%);

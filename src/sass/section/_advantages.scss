@@ -1,0 +1,151 @@
+.section__advantages {
+    background-color: $backgroundColorSecondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px;
+
+}
+
+.advantages {
+    margin: 0 5px;
+
+}
+
+.advantages__list {
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+    }
+
+    // @media screen and (min-width:1280px) {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     align-items: flex-start;
+
+    // }
+}
+
+.advantages__item {
+    margin-bottom: 32px;
+    margin-right: 100px;
+    padding-right: 30px;
+
+    @media screen and (min-width:768px) {
+        margin-right: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    
+    .advantages__item:not(:last-child) {
+        padding-right: 2px;
+        }
+    }
+    
+    // @media screen and (min-width:1280px) {
+    //     display: flex;   
+    //     flex-direction: column;
+    //}
+        .advantages__item:not(:last-child) {
+        margin-right: 115px;
+            }
+    
+
+}
+
+.advantages__image {
+    margin-bottom: 16px; 
+}
+
+.advantages__image  {
+    width: 44px;
+    height: 50px;
+
+    @include mq(tablet) {
+        width: 44px;
+        height: 50px
+    }
+
+    @include mq(desktop) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.advantages__img-cow {
+    @include backgroundImg (url(../images/mobile/d-milk-cow.png), url(../images/pngs/cow-milk-2x.png));
+
+    @include mq (tablet) {
+        left: 50;
+    }
+
+    @include mq (desktop) {
+        left: 38;
+    }
+}
+
+.advantages__img-fruits {
+    @include backgroundImg (url(../images/mobile/d-fruits.png), url(../images/pngs/fruits-2x.png));
+
+
+    @include mq (tablet) {
+        left: 292;
+    }
+
+    @include mq (desktop) {
+        left: 468;
+    }
+}
+
+.advantages__img-heart {
+    @include backgroundImg (url(../images/mobile/heart.png), url(../images/pngs/heart-2x.png));
+  
+
+    @include mq (tablet) {
+        left: 540;
+    }
+
+    @include mq (desktop) {
+        left: 890;
+    }
+}
+
+.advantages__numbers {
+    font-size: 36px;
+    font-family: $title-font;
+    font-style: $fontStyle;
+    font-weight: $fontWeightLight;
+    color:$darkAccentColor;
+    text-transform: uppercase;
+  
+    margin-bottom: 14px;
+    
+    @media screen and (min-width:768px) {
+        font-size: $fontSizeTLargest;
+    }
+
+    @media screen and (min-width:1280px) {
+        font-size: $fontSizeDLargest;
+    }
+}
+
+.advantages__label {
+    font-family: $pr-font;
+    font-style: $fontStyle;
+    font-weight: $fontWeightHeavy;
+    font-size: $fontSizeSmall;
+    color: $darkestColor;
+
+    @media screen and (min-width:768px) {
+            font-size: $fontSizeMain;
+        }
+    
+    @media screen and (min-width:1280px) {
+            font-size: $fontSizeMedium;
+        }
+    
+}

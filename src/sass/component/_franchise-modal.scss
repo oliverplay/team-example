@@ -1,0 +1,210 @@
+input {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  &.modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.contacts__modal {
+    @extend %pro-modal;
+    background-color: $backgroundColorSecondary;
+}
+
+.modal__close--franchise {
+  @extend %modal__close;
+  border-color: $backgroundColorSecondary;
+  color: $soc-bg-color;
+  &:hover,
+  &:focus {
+    border-color: $darkAccentColor;
+    color: $darkAccentColor;
+  }
+  @include transition(border-color, color);
+}
+
+.modal__title {
+  @extend %pro-modal-header;
+  margin-bottom: 20px;
+  color: $darkAccentColor;
+  margin-top: 20px;
+}
+
+.contacts-modal__wrapper {
+  border: 2px solid $soc-bg-color;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  &:nth-child(5) {
+  margin-bottom: 20px;
+  }
+}
+
+.modal__text {
+    margin-bottom: 4px;
+    font-family: $title-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: $darkAccentColor;
+}
+
+.modal__input {
+    padding: 10px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    &:focus {
+        border-color: $darkAccentColor;
+    }
+    &::placeholder {
+        font-family: $title-font;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        color: $backgroundAccentLight;
+    }
+    @include transition(border-color);
+}
+
+.modal__textarea {
+    padding: 10px;
+    height: 80px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    &:focus {
+        border-color: $darkAccentColor;
+    }
+    &::placeholder {
+        font-family: $title-font;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        color: $backgroundAccentLight;
+    }
+    @include transition(border-color);
+}
+
+.modal__radio {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 15px;
+}
+
+.modal__text-radio {
+    font-family: $title-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: $darkAccentColor;
+}
+
+.modal__label-radio {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+.modal__input-radio {
+    margin-right: 5px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+// Custom radio
+.custom-radio-btn {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 2px solid $darkAccentColor;
+    border-radius: 50%;
+    vertical-align: text-top;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.custom-radio-btn::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: $backgroundAccentLight;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    @include transition();
+}
+
+.modal__input-radio:checked+.custom-radio-btn::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+// Custom radio
+.modal__checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.modal__checkbox-input {
+    appearance: none;
+    &:focus+.modal__checkbox-icon {
+        border-color: $darkAccentColor;
+    }
+    &:checked+.modal__checkbox-icon {
+        background-origin: border-box;
+        background-color:$darkAccentColor;
+        border-color: $darkAccentColor;
+        fill: $lightestColor;
+    }
+}
+
+.modal__checkbox-icon {
+    margin-right: 10px;
+    border: 2px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    fill: transparent;
+    @include transition(background-color, border-color);
+}
+
+.modal__checbox-text {
+    font-family: $title-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: $darkAccentColor;
+}
+
+.fran-modal__button {
+    @extend %button;
+    width: 150px;
+    background-color: $darkAccentColor;
+    color: $lightestColor;
+    margin: 60px auto 0;
+}

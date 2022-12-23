@@ -1,0 +1,166 @@
+.contacts {
+    background-image: linear-gradient($backgroundColorMain 23%, $backgroundColorSecondary 23%);
+    @include mq(tablet) {
+    background-image: linear-gradient($backgroundColorMain 39%, $backgroundColorSecondary 39%);
+    }
+    @include mq(desktop) {
+    background-image: linear-gradient($backgroundColorMain 20%, $backgroundColorSecondary 20%);
+    }
+}
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    @include font($fontSizeSmall, $fontWeightMed, 1.86, 0.04em);
+    margin-bottom: 32px;
+    align-items: center;
+    justify-content: center;
+    @include mq(tablet) {
+        flex-direction: row;
+        margin: -16px;
+        margin-bottom: 59px;
+    }
+}
+
+.contacts__item {
+    padding: 32px 40px;
+    background: $lightestColor;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    @include mq(tablet) {
+        flex-basis: calc((100% - 64px) / 3);
+        margin: 16px;
+    }
+    @include transition(transform);
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+    }
+}
+
+@include mq(mobile-only) {
+    .contacts__item {
+        max-width: 280px;
+    }
+    .contacts__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.contacts__title {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 26px;
+    background-color: $backgroundAccentExtra;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 16px;
+    color: $lightestColor;
+}
+
+.contacts__title--green {
+    background-color: $backgroundAccentOther;
+}
+
+.contacts__text-black {
+    color: $darkestColor;
+}
+
+.contacts__text-red {
+    color: lightAccentColor;
+}
+
+.contacts__text--margin-bottom {
+    margin-bottom: 8px;
+}
+
+.contacts__text {
+    line-height: 1.5;
+    color: $fontColorAccentLight;
+}
+
+.contacts__box-working-time {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    border-top: $border-line;
+    border-bottom: $border-line;
+}
+
+.contacts__box-link {
+    color: $fontColorAccentLight;
+}
+
+.contacts__box-link:hover,
+.contacts__box-link:focus {
+    color: $darkAccentColor;
+}
+
+.btn {
+  font-size: $fontSizeMedium;
+  font-weight: $fontWeightHeavy;
+  line-height: 21px;
+  border-radius: 22px;
+  padding: 9px 0;
+  
+  @include mq(tablet) {
+        padding: 9px 30px;
+  }
+
+  @include mq(desktop) {
+  padding: 13px 40px;
+  }
+}
+
+.btn-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mq(tablet) {
+        flex-direction: row;
+    }
+}
+
+.btn-list__item {
+    animation: anim 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s infinite alternate both;
+}
+
+.btn-list__item:not(:last-child) {
+    @include mq(mobile-only) {
+        margin-bottom: 8px;
+    }
+    @include mq(tablet) {
+        margin-right: 15px;
+    }
+    @include mq(desktop) {
+        margin-right: 20px;
+    }
+}
+
+.btn-list__btn {
+    background-color: $lightestColor;
+    color: $darkAccentColor;
+    @include transition(transform, background-color, color);
+    @include mq(mobile-only) {
+        min-width: 162px;
+    }
+}
+
+.btn-list__btn:hover,
+.btn-list__btn:focus {
+    background: $hoverLight;
+    transform: scale(1.1);
+}
+
+.btn-list__btn--red {
+    color: $lightestColor;
+    background-color: $darkAccentColor;
+    &:hover,
+    &:focus {
+        background: $hoverLight;
+        color: $darkAccentColor;
+    }
+}

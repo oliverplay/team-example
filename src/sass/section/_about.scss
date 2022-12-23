@@ -1,0 +1,107 @@
+.about {
+  background-color: $backgroundColorSecondary;
+  position: relative;
+}
+
+.about__wrapper--right {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__wrapper {
+  @include mq (tablet) {
+  display: flex;
+  }
+}
+
+.about__text {
+  @include font($fontSizeSmall, $fontWeightMed, 25px, 0.04em);
+  text-align: left;
+  position: relative;
+  margin-right: 80px;
+  
+  @include mq (tablet) {
+    font-size: $fontSizeMain;
+    width: 334px;
+    margin-right: 0px;
+  }
+
+  @include mq (desktop) {
+    width: 463px;
+  }
+}
+
+.about__paragraph-one {
+  margin: 20px 0;
+
+  @include mq (tablet) {
+    margin-top: 40px;
+  }
+  @include mq (desktop) {
+    font-size: $fontSizeMedium;
+    margin-top: 150px;
+    margin-bottom: 12px;
+  }
+}
+
+.about__paragraph-two {
+  color: $fontColorAccentLight;
+  margin: 20px 0;
+}
+
+.about__paragraph-three {
+  color: $fontColorAccentLight;
+}
+
+.about__img {
+  @include backgroundImg (url(../images/mobile/m-cow280.png), url(../images/mobile/m-cow560.png));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 280px;
+  height: 280px;
+  margin-top: 32px;
+
+    @include mq (tablet) {
+      @include backgroundImg (url(../images/tablet/t-cow336.png), url(../images/tablet/t-cow672.png));
+      width: 336px;
+      height: 336px;
+      margin-top: 40px;
+      margin-right: 32px;
+    }
+
+  @include mq (desktop) {
+    @include backgroundImg (url(../images/desktop/d-cow501.png), url(../images/desktop/d-cow1002.png));
+      width: 501px;
+      height: 501px;
+      margin-right: 100px;
+      margin-top: 60px;
+  }
+}
+
+.about__img-background {
+  @include backgroundImg (url(../images/mobile/m-milk280.png), url(../images/mobile/m-milk560.png));
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 0;
+  top: 530;
+  left: 0;
+  width: 100vw;
+  min-height: 200px;
+
+  @include mq (tablet) {
+    background-image: unset;
+    width: 0%;
+  }
+
+  @include mq (desktop) {
+    @include backgroundImg (url(../images/desktop/d-milk1200.png), url(../images/desktop/d-milk2400.png));
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100vw;
+    min-height: 521px;
+    top: 166;
+  }
+}
