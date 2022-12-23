@@ -1,9 +1,2 @@
-@import 'util/vars';
-@import 'util/mixins';
-@import 'base/bases';
-@import 'section/sections';
-@import 'component/components';
-
-
-
-
+@use './base/container';
+@use './layout/header';
